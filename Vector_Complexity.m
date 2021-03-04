@@ -1,7 +1,7 @@
 
 tic
 %% Weighting factor for each parameter %%
-w2 = 0.1129  ; % Weighting factor for aircraft type
+w2 = 0.1129  ; % Weighting factor for A/C type
 w3 = 0.1430  ; % Weighting factor for speed ratio
 w4 = 0.02288  ; % Weighting factor for number of cruising A/C 
 w5 = 0.03287 ; % Weighting factor  for number of descending A/C
@@ -200,7 +200,7 @@ plot(CA1,'r')
  ylim([0 10])
  xlabel('time')
  ylabel('Complexity')
- title("Air Traffic Complexity")  
+ title('Air Traffic Complexity')  
 
 
 hold on
