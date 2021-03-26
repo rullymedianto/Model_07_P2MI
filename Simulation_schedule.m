@@ -1,6 +1,6 @@
 %% Define Cell
 %Simulation Time
-%time = 1200;
+time = 1200;
 tic
 Sim1 = cell(1,time);
 %% Import Data from PlaneGenerator
