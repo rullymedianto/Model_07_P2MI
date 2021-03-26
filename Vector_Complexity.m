@@ -67,7 +67,7 @@ A12 = vector_coordinationArray1;
 numofcomplexityArray1 = w1*A1(:,1) + w2*A2(:,1) + w3*A3(:,1) + w5*A5(:,1) + w6*A6(:,1) + (w11*(A7(:,1) + A8(:,1))/2) + w12*A12(:,1);
 CA1 = numofcomplexityArray1;
 %CA1 = movmedian(numofcomplexityArray1,5);
-plotnumofcomplexity1 = plot(CA1,'r');       
+plotnumofcomplexity1 = plot(CA1,'y');       
 
 max_complexity1 = max(CA1);
 % min_complexity1 = min(CA1);
@@ -84,7 +84,7 @@ mean_aircraftinsector1 = mean(A1(:,1));
 numofcomplexityArray2 = w1*A1(:,2) + w2*A2(:,2) + w3*A3(:,2) + w5*A5(:,2) + w6*A6(:,2) +(w11*(A7(:,2) + A8(:,2))/2) + w12*A12(:,2);
 CA2 = numofcomplexityArray2;
 %CA2 = movmedian(numofcomplexityArray2,5);
-plotnumofcomplexity2 = plot(CA2,'r');       
+plotnumofcomplexity2 = plot(CA2,'m');       
 
 max_complexity2 = max(CA2);
 % min_complexity2 = min(CA2);
@@ -101,7 +101,7 @@ mean_aircraftinsector2 = mean(A1(:,2));
 numofcomplexityArray3 = w1*A1(:,3) + w2*A2(:,3) + w3*A3(:,3) + w5*A5(:,3) + w6*A6(:,3) +(w11*(A7(:,3) + A8(:,3))/2) + w12*A12(:,3);
 CA3 = numofcomplexityArray3;
 %CA3 = movmedian(numofcomplexityArray3,5);
-plotnumofcomplexity3 = plot(CA3,'r');       
+plotnumofcomplexity3 = plot(CA3,'c');       
 
 max_complexity3 = max(CA3);
 % min_complexity3 = min(CA3);
@@ -135,7 +135,7 @@ mean_aircraftinsector4 = mean(A1(:,4));
 numofcomplexityArray5 = w1*A1(:,5) + w2*A2(:,5) + w3*A3(:,5) + w5*A5(:,5) + w6*A6(:,5) +(w11*(A7(:,5) + A8(:,5))/2) + w12*A12(:,5);
 
 CA5 = movmedian(numofcomplexityArray5,5);
-plotnumofcomplexity5 = plot(CA5,'r');       
+plotnumofcomplexity5 = plot(CA5,'g');       
 
 max_complexity5 = max(CA5);
 % min_complexity5 = min(CA5);
@@ -148,11 +148,11 @@ mean_aircraftinsector5 = mean(A1(:,5));
 % 
 % Complexity_param5 = [Max_Complexity5 Min_Complexity5];
 
-%% Number of Complexity % Terminal South (TS)%%
+%% Number of Complexity Terminal South (TS)%%
 numofcomplexityArray6 = w1*A1(:,6) + w2*A2(:,6) + w3*A3(:,6) + w5*A5(:,6) + w6*A6(:,6) +(w11*(A7(:,6) + A8(:,1))/2) + w12*A12(:,6);
 
 CA6 = movmedian(numofcomplexityArray6,5);
-plotnumofcomplexity6 = plot(CA6,'r');       
+plotnumofcomplexity6 = plot(CA6,'b');       
 
 max_complexity6 = max(CA6);
 % min_complexity6 = min(CA6);
@@ -169,7 +169,7 @@ mean_aircraftinsector6 = mean(A1(:,6));
 numofcomplexityArray7 = w1*A1(:,7) + w2*A2(:,7) + w3*A3(:,7) + w5*A5(:,7) + w6*A6(:,7) +(w11*(A7(:,7) + A8(:,7))/2) + w12*A12(:,7);
 
 CA7 = movmedian(numofcomplexityArray7,5);
-plotnumofcomplexity7 = plot(CA7,'r');       
+plotnumofcomplexity7 = plot(CA7,'w');       
 
 max_complexity7 = max(CA7);
 % min_complexity7 = min(CA7);
@@ -186,7 +186,7 @@ mean_aircraftinsector7 = mean(A1(:,7));
 numofcomplexityArray8 = w1*A1(:,8) + w2*A2(:,8) + w3*A3(:,8) + w5*A5(:,8) + w6*A6(:,8) +(w11*(A7(:,8) + A8(:,8))/2) + w12*A12(:,8);
 
 CA8 = movmedian(numofcomplexityArray8,5);
-plotnumofcomplexity8 = plot(CA8,'r');       
+plotnumofcomplexity8 = plot(CA8,'k');       
 
 max_complexity8 = max(CA8);
 % min_complexity8 = min(CA8);
@@ -199,25 +199,26 @@ mean_aircraftinsector8 = mean(A1(:,8));
 % 
 % Complexity_param8 = [Max_Complexity8 Min_Complexity8];
 
+%%
 CATOT = [CA1 CA2 CA3 CA4 CA5 CA6 CA7 CA8];
 
 %legend('12NM','15NM')
-plot(CA1,'r')       
+plot(CA1,'y')       
  xlim([0 t])
  ylim([0 10])
- xlabel('time')
+ xlabel('Time')
  ylabel('Complexity')
  title('Air Traffic Complexity')  
 
 
 hold on
-plot(CA2,'b')
-plot(CA3,'g')
-plot(CA4,'c')
-plot(CA5,'y')
-plot(CA6,'r')
-plot(CA7,'r')
-plot(CA8,'r')
+plot(CA2,'m')
+plot(CA3,'c')
+plot(CA4,'r')
+plot(CA5,'g')
+plot(CA6,'b')
+plot(CA7,'w')
+plot(CA8,'k')
 
 hold off
 timeElapsed_Vector_Complexity = toc;
